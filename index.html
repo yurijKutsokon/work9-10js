@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slides</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">Sliders</a></li>
+        <li><a href="#tabs-2">Select</a></li>
+        <li><a href="#tabs-3">Checkbox</a></li>
+        <li><a href="#tabs-4">Slide Down Menu</a></li>
+    </ul>
+    <div id="tabs-1">
+        <div class="slider">
+            <div class="owl-carousel">
+                <img src='img/1.jpg' alt="Slide 1">
+                <img src='img/2.jpg' alt="Slide 2">
+                <img src='img/3.jpg' alt="Slide 3">
+                <img src='img/4.jpg' alt="Slide 4">
+                <img src='img/5.jpg' alt="Slide 5">
+                <img src='img/6.jpg' alt="Slide 6">
+                <img src='img/7.jpg' alt="Slide 7">
+            </div>
+        </div>
+    </div>
+    <div id="tabs-2">
+        <div class="frame">
+            <select class="js-example-basic-single">
+                <option value="AL">Alabama</option>
+                <option value="TX">Texas</option>
+                <option value="WY">Wyoming</option>
+            </select>
+        </div>
+    </div>
+    <div id="tabs-3"></div>
+    <div id="tabs-4">
+        <nav>
+            <ul class="content clearfix" id="navmenu-v">
+                <li class="dropdown"><a href="#">Главная</a></li>
+                <li class="dropdown"><a href="#">Путешествие</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Путешествие 1</a></li>
+                        <li><a href="#">Путешествие 2</a></li>
+                        <li class="dropdown"><a href="#">Путешествие 3</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Путешествие 3.1</a></li>
+                                <li><a href="#">Путешествие 3.2</a></li>
+                                <li class="dropdown"><a href="#">Путешествие 3.3</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Путешествие 3.3.1</a></li>
+                                        <li><a href="#">Путешествие 3.3.2</a></li>
+                                        <li><a href="#">Путешествие 3.3.3</a></li>
+                                        <li><a href="#">Путешествие 3.3.4</a></li>
+                                        <li><a href="#">Путешествие 3.3.5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Путешествие 3.4</a></li>
+                                <li><a href="#">Путешествие 3.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Путешествие 4</a></li>
+                        <li><a href="#">Путешествие 5</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Услуги</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Услуги 1</a></li>
+                        <li><a href="#">Услуги 2</a></li>
+                        <li class="dropdown"><a href="#">Услуги 3</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Услуги 3.1</a></li>
+                                <li><a href="#">Услуги 3.2</a></li>
+                                <li class="dropdown"><a href="#">Услуги 3.3</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Услуги 3.3.1</a></li>
+                                        <li><a href="#">Услуги 3.3.2</a></li>
+                                        <li><a href="#">Услуги 3.3.3</a></li>
+                                        <li><a href="#">Услуги 3.3.4</a></li>
+                                        <li><a href="#">Услуги 3.3.5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Услуги 3.4</a></li>
+                                <li><a href="#">Услуги 3.5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Услуги 4</a></li>
+                        <li><a href="#">Услуги 5</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Партнерам</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Партнерам 1</a></li>
+                        <li><a href="#">Партнерам 2</a></li>
+                        <li class="dropdown"><a href="#">Партнерам 3</a></li>
+                        <li><a href="#">Партнерам 4</a></li>
+                        <li><a href="#">Партнерам 5</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#">Отзывы клиентов</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<script>
+
+    var lis = document.getElementById("navmenu-v").getElementsByTagName("LI");
+    for (var i=0; i<lis.length; i++) {
+        lis[i].onmouseover=function() {
+            this.className+=" iehover";
+        }
+        lis[i].onmouseout=function() {
+            this.className=this.className.replace(new RegExp(" iehover\\b"), "");
+        }
+    }
+
+</script>
+</body>
+</html>
